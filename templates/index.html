@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 class="mb-3">Dormitory Management System</h1>
+<p class="text-muted mb-4">
+    This Flask app is connected to your SQLite database and lets you preview your tables in a simple, pleasant interface.
+</p>
+
+<a href="/preview" class="btn btn-primary btn-lg">Preview Database</a>
+{% endblock %}

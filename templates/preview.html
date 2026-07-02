@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Database Preview{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <h1 class="mb-2">Database Preview</h1>
+    <p class="text-muted mb-0">Browse the tables and rows currently stored in your SQLite database.</p>
+</div>
+
+<a href="/" class="btn btn-outline-secondary btn-sm mb-4">Back Home</a>
+
+{% for table, info in data.items() %}
+<div class="mb-4">
+    <h2 class="table-title h5">{{ table }}</h2>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    {% for col in info.columns %}
+                    <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in info.rows %}
+                <tr>
+                    {% for col in info.columns %}
+                    <td>{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
