@@ -209,7 +209,7 @@ sqlite3 instance/app.db < operations.sql
 .quit
 ```
 
-## Commands to show your lecturer
+## Commands 
 ```
 sqlite3 instance/app.db
 sqlite3 instance/app.db < create_tables.sql
