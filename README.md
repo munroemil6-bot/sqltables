@@ -1,4 +1,4 @@
-# Dormitory Management System (Flask + SQLite)
+# Dormitory Management System 
 
 ## Project structure
 ```
